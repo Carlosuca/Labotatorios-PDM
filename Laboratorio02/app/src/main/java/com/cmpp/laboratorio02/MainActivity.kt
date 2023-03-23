@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         bind()
 
         nDisplayTextView.text = ""
+        var response =""
         nButtonSend.setOnClickListener{
             val weight = nWeightEditText.text.toString()
             val height = nHeigthEditText.text.toString()
@@ -27,7 +28,29 @@ class MainActivity : AppCompatActivity() {
             val result = weight.toFloat() / ((height.toFloat() / 100) * (height.toFloat() / 100))
 
 
-            nDisplayTextView.text = getString(R.string.greeting_text,result) //no se porque me agarra el result y creo estar bien
+
+            if(result <  18.5){
+                response = "underwait"
+            }
+            if(result > 18.5 && result < 24.99){
+                response = "healthy"
+            }
+            if(result > 25 && result < 29.99){
+                response = "overweight"
+            }
+            if(result > 30){
+                response = "obese"
+            }
+
+
+
+            nDisplayTextView.text = getString(R.string.greeting_text,result, response)
+
+
+
+
+
+
 
 
         }

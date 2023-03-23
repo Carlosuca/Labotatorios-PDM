@@ -44,7 +44,7 @@
                 android:id="@+id/weight_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="70"
+                android:hint="kg"
                 android:textSize="30dp"
                 android:textColor="@color/text_hint"
                 />
@@ -81,7 +81,7 @@
                 android:id="@+id/height_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="70"
+                android:hint="cm"
                 android:textSize="30dp"
                 android:textColor="@color/white"
                 />
