@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Laboratorio02</string>
+    <string name="text_name">Nombre</string>
+    <string name="action">Send</string>
+    <string name="action_send">Send</string>
+    <string name="greeting_text">hello, %s</string>
+</resources>
