@@ -24,7 +24,6 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ten_cents_image_view"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +46,6 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="@dimen/default_gaps"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/dollar_image_view"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,12 +68,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_gaps"
-        tools:text="0"
         android:textColor="@color/black"
         android:textSize="64sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amount_of_money_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/amount_of_money_text_view"
+        tools:text="0" />
 
     <TextView
         android:id="@+id/five_cent_text_view"
