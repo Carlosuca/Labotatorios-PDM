@@ -41,23 +41,10 @@ class MainActivity : AppCompatActivity() {
             if(result > 30){
                 response = "obese"
             }
-
-
-
             nDisplayTextView.text = getString(R.string.greeting_text,result, response)
 
-
-
-
-
-
-
-
         }
-
-
     }
-
     private fun bind () {
         nHeigthEditText = findViewById(R.id.height_edit_text)
         nWeightEditText = findViewById(R.id.weight_edit_text)
