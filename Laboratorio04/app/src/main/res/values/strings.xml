@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Laboratorio04</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_email">Correo Electronico</string>
+    <string name="hint_phone">Numero de telefono</string>
+    <string name="txt_button_send">Enviar</string>
+    <string name="text_result_name">Nombre: %s</string>
+    <string name="text_result_email">Correo Electronico: %s</string>
+    <string name="text_result_phone">Numero de telefono: %s</string>
+    <string name="text_btn_share">Compartir</string>
+    <string name="text_rellene_info">Rellene la siguiente informacion</string>
+    <string name="text_confirm_info">Confirma tu informacion</string>
+</resources>
