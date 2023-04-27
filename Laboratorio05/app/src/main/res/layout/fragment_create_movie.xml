@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateMovieFragment"
-    android:background="@color/backgroundLayout">
+    android:background="@color/backgroundLayout"
+    tools:context=".ui.movie.CreateMovieFragment">
 
     <TextView
         android:id="@+id/textView2"
@@ -31,6 +31,7 @@
         android:layout_marginTop="@dimen/default_gap"
         android:layout_marginEnd="@dimen/default_gap"
         android:hint="@string/name_text_view"
+        android:textColorHint="@color/white"
         app:hintTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,9 +39,10 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:background="@color/cardLayout"
+            android:id="@+id/create_movie_name_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/cardLayout"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
 
@@ -49,35 +51,40 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:hintTextColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/default_gap"
         android:layout_marginTop="@dimen/default_gap"
         android:layout_marginEnd="@dimen/default_gap"
         android:hint="@string/category_text_view"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/outlinedTextField"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:background="@color/cardLayout"
+            android:id="@+id/create_movie_category_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@color/cardLayout"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:hintTextColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/default_gap"
         android:layout_marginTop="@dimen/default_gap"
         android:layout_marginEnd="@dimen/default_gap"
         android:hint="@string/description_text_view"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,47 +92,55 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:background="@color/cardLayout"
+            android:id="@+id/create_movie_description_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@color/cardLayout"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:hintTextColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/default_gap"
         android:layout_marginTop="@dimen/default_gap"
         android:layout_marginEnd="@dimen/default_gap"
         android:hint="@string/calification_edit_text"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:background="@color/cardLayout"
+            android:id="@+id/create_movie_calification_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@color/cardLayout"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+
+        android:id="@+id/create_movie_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/default_gap"
         android:layout_marginTop="@dimen/default_gap"
         android:layout_marginEnd="@dimen/default_gap"
-        android:text="@string/submit_text_button"
-        android:textColor="@color/white"
         android:backgroundTint="@color/buttonColor"
+        android:text="@string/submit_text_button"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

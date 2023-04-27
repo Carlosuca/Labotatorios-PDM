@@ -1,7 +1,8 @@
-package com.cmpp.laboratorio05
+package com.cmpp.laboratorio05.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.cmpp.laboratorio05.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

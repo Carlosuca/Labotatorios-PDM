@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/createMovieFragment"
-        android:name="com.cmpp.laboratorio05.CreateMovieFragment"
+        android:name="com.cmpp.laboratorio05.ui.movie.CreateMovieFragment"
         android:label="fragment_create_movie"
         tools:layout="@layout/fragment_create_movie" />
     <fragment
         android:id="@+id/movieFragment"
-        android:name="com.cmpp.laboratorio05.MovieFragment"
+        android:name="com.cmpp.laboratorio05.ui.movie.MovieFragment"
         android:label="fragment_movie"
         tools:layout="@layout/fragment_movie" />
 </navigation>

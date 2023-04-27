@@ -1,18 +1,18 @@
 package com.cmpp.laboratorio05
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.cardview.widget.CardView
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-private lateinit var buttonAddMovie: FloatingActionButton
 private lateinit var movieCardView: CardView
 
+
+private lateinit var buttonAddMovie: FloatingActionButton
 
 class BillboardFragment : Fragment() {
 
