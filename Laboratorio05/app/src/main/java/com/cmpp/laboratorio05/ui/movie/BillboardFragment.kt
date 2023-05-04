@@ -7,12 +7,14 @@ import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.cmpp.laboratorio05.databinding.FragmentBillboardBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 private lateinit var movieCardView: CardView
 
 
 private lateinit var buttonAddMovie: FloatingActionButton
+private lateinit var binding: FragmentBillboardBinding
 
 class BillboardFragment : Fragment() {
 
@@ -21,8 +23,8 @@ class BillboardFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        return inflater.inflate(R.layout.fragment_billboard, container, false)
+        binding = FragmentBillboardBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

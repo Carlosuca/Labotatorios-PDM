@@ -13,7 +13,8 @@ import androidx.navigation.fragment.findNavController
 import com.cmpp.laboratorio05.data.model.MovieModel
 import com.cmpp.laboratorio05.databinding.FragmentCreateMovieBinding
 
-class CreateMovieFragment : Fragment() {
+
+class NewMovieFragment : Fragment() {
 
     private lateinit var binding: FragmentCreateMovieBinding
     private val viewModel: MovieViewModel by activityViewModels {
@@ -30,10 +31,36 @@ class CreateMovieFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setViewModel()
+        observeStatus()
 
         binding.createMovieButton.setOnClickListener {
             createMovie()
-            Toast.makeText(context, "Nueva pelicula agregada correctamente", LENGTH_SHORT).show()
+            //Toast.makeText(context, "Nueva pelicula agregada correctamente", LENGTH_SHORT).show()
+        }
+    }
+
+    private fun setViewModel() {
+        binding.viewmodel = viewModel
+    }
+
+    private fun observeStatus()  {
+        viewModel.status.observe(viewLifecycleOwner) { status ->
+            when{
+                status.equals(MovieViewModel.WRONG_INFORMATION) -> {
+                    Log.d("APP_TAG", status)
+                    viewModel.clearStatus()
+                }
+                status.equals(MovieViewModel.MOVIE_CRATED) -> {
+                    Log.d("APP_TAG", status)
+                    Log.d("APP_TAG", viewModel.getMovies().toString())
+
+                    viewModel.clearStatus()
+                    findNavController().popBackStack()
+                    Toast.makeText(context, "Nueva pelicula agregada correctamente", LENGTH_SHORT).show()
+                }
+            }
+
         }
     }
 
@@ -46,7 +73,7 @@ class CreateMovieFragment : Fragment() {
         )
 
         viewModel.addMovie(newMovie)
-        Log.d("LIST MOVIES", viewModel.getMovies().toString())
+        Log.d("LIST_MOVIES", viewModel.getMovies().toString())
 
         findNavController().popBackStack()
     }

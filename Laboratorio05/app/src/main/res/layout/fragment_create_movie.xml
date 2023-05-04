@@ -1,146 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/backgroundLayout"
-    tools:context=".ui.movie.CreateMovieFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/default_gap"
-        android:layout_marginTop="@dimen/default_gap"
-        android:layout_marginEnd="@dimen/default_gap"
-        android:text="@string/new_movie_text"
-        android:textColor="@color/white"
-        android:textSize="32sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+    <data>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outlinedTextField"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <variable
+            name="viewmodel"
+            type="com.cmpp.laboratorio05.ui.movie.MovieViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/default_gap"
-        android:layout_marginTop="@dimen/default_gap"
-        android:layout_marginEnd="@dimen/default_gap"
-        android:hint="@string/name_text_view"
-        android:textColorHint="@color/white"
-        app:hintTextColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="MissingConstraints">
+        android:layout_height="match_parent"
+        android:background="@color/backgroundLayout"
+        tools:context=".ui.movie.NewMovieFragment">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/create_movie_name_edit_text"
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_gap"
+            android:layout_marginTop="@dimen/default_gap"
+            android:layout_marginEnd="@dimen/default_gap"
+            android:text="@string/new_movie_text"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/cardLayout"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:layout_marginStart="@dimen/default_gap"
+            android:layout_marginTop="@dimen/default_gap"
+            android:layout_marginEnd="@dimen/default_gap"
+            android:hint="@string/name_text_view"
+            android:textColorHint="@color/white"
+            app:hintTextColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            tools:ignore="MissingConstraints">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/create_movie_name_edit_text"
+                android:text="@={viewmodel.name}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardLayout"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/default_gap"
-        android:layout_marginTop="@dimen/default_gap"
-        android:layout_marginEnd="@dimen/default_gap"
-        android:hint="@string/category_text_view"
-        android:textColorHint="@color/white"
-        app:hintTextColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField"
-        tools:ignore="MissingConstraints">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/create_movie_category_edit_text"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/cardLayout"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:layout_marginStart="@dimen/default_gap"
+            android:layout_marginTop="@dimen/default_gap"
+            android:layout_marginEnd="@dimen/default_gap"
+            android:hint="@string/category_text_view"
+            android:textColorHint="@color/white"
+            app:hintTextColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField"
+            tools:ignore="MissingConstraints">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/create_movie_category_edit_text"
+                android:text="@={viewmodel.category}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardLayout"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/default_gap"
-        android:layout_marginTop="@dimen/default_gap"
-        android:layout_marginEnd="@dimen/default_gap"
-        android:hint="@string/description_text_view"
-        android:textColorHint="@color/white"
-        app:hintTextColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-        tools:ignore="MissingConstraints">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/create_movie_description_edit_text"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/cardLayout"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:layout_marginStart="@dimen/default_gap"
+            android:layout_marginTop="@dimen/default_gap"
+            android:layout_marginEnd="@dimen/default_gap"
+            android:hint="@string/description_text_view"
+            android:textColorHint="@color/white"
+            app:hintTextColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            tools:ignore="MissingConstraints">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/create_movie_description_edit_text"
+                android:text="@={viewmodel.description}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardLayout"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/default_gap"
-        android:layout_marginTop="@dimen/default_gap"
-        android:layout_marginEnd="@dimen/default_gap"
-        android:hint="@string/calification_edit_text"
-        android:textColorHint="@color/white"
-        app:hintTextColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
-        tools:ignore="MissingConstraints">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/create_movie_calification_edit_text"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/cardLayout"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:layout_marginStart="@dimen/default_gap"
+            android:layout_marginTop="@dimen/default_gap"
+            android:layout_marginEnd="@dimen/default_gap"
+            android:hint="@string/calification_edit_text"
+            android:textColorHint="@color/white"
+            app:hintTextColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+            tools:ignore="MissingConstraints">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="number"
+                android:id="@+id/create_movie_calification_edit_text"
+                android:text="@={viewmodel.qualification}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardLayout"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
 
-    <Button
+        </com.google.android.material.textfield.TextInputLayout>
 
-        android:id="@+id/create_movie_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/default_gap"
-        android:layout_marginTop="@dimen/default_gap"
-        android:layout_marginEnd="@dimen/default_gap"
-        android:backgroundTint="@color/buttonColor"
-        android:text="@string/submit_text_button"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+        <Button
+
+            android:id="@+id/create_movie_button"
+            android:onClick="@{() -> viewmodel.createMovie()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_gap"
+            android:layout_marginTop="@dimen/default_gap"
+            android:layout_marginEnd="@dimen/default_gap"
+            android:backgroundTint="@color/buttonColor"
+            android:text="@string/submit_text_button"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
