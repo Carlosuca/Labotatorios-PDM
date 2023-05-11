@@ -1,4 +1,4 @@
-package com.cmpp.laboratorio05.ui.movie
+package com.cmpp.laboratorio05.ui.movie.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -37,7 +37,7 @@ class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
         status.value = MOVIE_CRATED
     }
 
-    private fun clearData() {
+    fun clearData() {
         name.value = ""
         category.value = ""
         description.value = ""
@@ -59,8 +59,18 @@ class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
         return true
     }
 
+    fun setSelectedMovie(movie: MovieModel) {
+        name.value = movie.name
+        category.value = movie.category
+        description.value = movie.description
+        qualification.value = movie.qualification
+
+
+    }
+
 
     fun getMovies() = repository.getMovies()
+
 
     fun addMovie(movie: MovieModel) = repository.addMovies(movie)
 
